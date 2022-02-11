@@ -1,9 +1,8 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <header>
+    <h1>Brew Dog App</h1>
+  </header>
+  <router-view />
 </template>
 
 <style>
