@@ -31,7 +31,7 @@ export default {
 }
 
 .beeritem {
-  min-height: 26vh;
+  min-height: 30vh;
   background-color: #f3f3f3;
   display: flex;
   gap: 1.5rem;

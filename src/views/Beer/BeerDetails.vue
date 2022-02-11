@@ -1,9 +1,9 @@
 <template>
   <div v-if="beer">
-    <h1>{{ beer.name }}</h1>
     <img :src="beer.image_url" :alt="beer.name" />
+    <h1>{{ beer.name }}</h1>
     <h2>ABV: {{ beer.abv }}</h2>
-    <p>This is beer {{ beer.id }}</p>
+    <p>This is beer id: {{ beer.id }}</p>
     <p>{{ beer.description }}</p>
     <h1>Hops</h1>
     <ul>
@@ -17,10 +17,11 @@
         <p>{{ malt.name }}</p>
       </li>
     </ul>
+    <h1>Methods</h1>
     <ul>
       <li v-for="(method, key) in beer.method" :key="key">
         <!-- Beer Method Component here. -->
-        {{ method }}
+        <p v-if="method">Beer Method Component here. {{ key }} {{ method }}</p>
       </li>
     </ul>
   </div>
