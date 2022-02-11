@@ -1,13 +1,6 @@
 <template>
   <div>
-    <BeerItem
-      v-for="beer in beers"
-      :key="beer.id"
-      :name="beer.name"
-      :abv="beer.abv"
-      :img="beer.image_url"
-      :desc="beer.description"
-    ></BeerItem>
+    <BeerItem v-for="beer in beers" :key="beer.id" :beer="beer"></BeerItem>
   </div>
 </template>
 

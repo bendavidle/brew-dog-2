@@ -1,14 +1,16 @@
 <template>
-  <div class="beeritem">
-    <div>
-      <img :src="img" :alt="name" />
+  <router-link :to="{ name: 'BeerDetails', params: { id: beer.id } }">
+    <div class="beeritem">
+      <div>
+        <img :src="beer.image_url" :alt="beer.name" />
+      </div>
+      <div class="beerinfo">
+        <h1>{{ beer.name }}</h1>
+        <h2>ABV: {{ beer.abv }}</h2>
+        <p>{{ beer.description }}</p>
+      </div>
     </div>
-    <div class="beerinfo">
-      <h1>{{ name }}</h1>
-      <h2>ABV: {{ abv }}</h2>
-      <p>{{ desc }}</p>
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script lang="js">
@@ -16,16 +18,18 @@
 export default {
   name: "BeerItem",
   props: {
-    name: String,
-    abv: Number,
-    desc: String,
-    img: String
+    beer: Object,
   }
   
 }
 </script>
 
 <style scoped lang="css">
+* {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
 .beeritem {
   min-height: 26vh;
   background-color: #f3f3f3;
