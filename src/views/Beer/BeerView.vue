@@ -20,7 +20,8 @@ export default {
   },
   async mounted() {
     let beers = await axios.get('https://api.punkapi.com/v2/beers');
-    this.beers = beers.data
+    this.beers.length=0;
+    this.beers.push(...beers.data)
     console.log(this.beers)
   },
 }

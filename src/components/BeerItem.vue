@@ -18,7 +18,7 @@
 export default {
   name: "BeerItem",
   props: {
-    beer: Object,
+    beer: Object, 
   }
   
 }
@@ -49,7 +49,6 @@ export default {
 .beerinfo {
   display: flex;
   flex-direction: column;
-  align-self: center;
   gap: 1rem;
   align-items: center;
 }
